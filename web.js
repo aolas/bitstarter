@@ -8,7 +8,8 @@ fs.readFile('/etc/hosts', 'utf8', function (err,data) {
     return console.log(err);
   }
   //console.log(data);
-  app.get('/', function(request, response) {                                                         response.Asend(data);
+  app.get('/', function(request, response) {                                                         
+      response.send(data);
   });
  
 });
