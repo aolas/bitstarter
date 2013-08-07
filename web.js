@@ -3,7 +3,7 @@ var app = express();
 app.use(express.logger());
 
 fs = require('fs');
-fs.readFile('/etc/hosts', 'utf8', function (err,data) {
+fs.readFile('index.html', 'utf8', function (err,data) {
   if (err) {
     return console.log(err);
   }
