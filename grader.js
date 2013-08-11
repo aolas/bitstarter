@@ -79,13 +79,13 @@ if(require.main == module) {
 	.option('-u, --url <html_adress>', 'URL adress', clone(assertURLExists), 'None specified')
 	.parse(process.argv);
     if ('None specified' == program.url ){
-	console.log('File argument');
+	//console.log('File argument');
 	var checkJson = checkHtmlFile(program.file, program.checks, false);
 	var outJson = JSON.stringify(checkJson, null, 4);
 	console.log(outJson);
     }
     else{
-	console.log('url argumentas');
+	//console.log('url argumentas');
 	var result = request(program.url, function (error, response, body) {
 	    if (!error && response.statusCode == 200) {
 		//console.log(body);
